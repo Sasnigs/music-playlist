@@ -44,7 +44,9 @@ header{
 .playlist-cards{
     display: flex;
     justify-content: space-evenly;
-    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 30px;
 }
 .cards{
      border-radius: 5px;
@@ -53,11 +55,15 @@ header{
 .cards * {
     margin-bottom: 10px;
 }
+.cards p{
+    padding-left: 10px;
+}
 
 .playlist-title{
     font-weight: bold;
-    font-size: small;
+    font-size: large;
 }
 .creator-name{
-    font-size: x-small;
+    font-size: small;
 }
+
