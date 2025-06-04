@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol{
+    list-style: none;
+}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
