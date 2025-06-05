@@ -1,9 +1,10 @@
-[
+const playlist = [
     {
       "playlistId": 1,
       "playlistTitle": "Late Night Drive",
       "playlistCreator": "Mickey Mouse",
       "playlistLikeCount": 0,
+      "playlistImage": "https://picsum.photos/200",
       "playlistSongs": [
         {
           "songId": 1,
@@ -54,6 +55,7 @@
       "playlistTitle": "Favorite Songs",
       "playlistCreator": "Donald Duck",
       "playlistLikeCount": 15,
+      "playlistImage": "https://picsum.photos/200",
       "playlistSongs": [
         {
           "songId": 1,
@@ -104,6 +106,7 @@
       "playlistTitle": "That Summer Feeling",
       "playlistCreator": "Goofy",
       "playlistLikeCount": 22,
+       "playlistImage": "https://picsum.photos/200",
       "playlistSongs": [
         {
           "songId": 1,
@@ -168,6 +171,7 @@
       "playlistTitle": "Workout Beats",
       "playlistCreator": "Daisy Duck",
       "playlistLikeCount": 5,
+       "playlistImage": "https://picsum.photos/200",
       "playlistSongs": [
         {
           "songId": 1,
@@ -246,6 +250,7 @@
       "playlistTitle": "Road Trip Anthems",
       "playlistCreator": "Pluto",
       "playlistLikeCount": 10,
+       "playlistImage": "https://picsum.photos/200",
       "playlistSongs": [
         {
           "songId": 1,
@@ -310,6 +315,7 @@
       "playlistTitle": "Boss Chick Energy",
       "playlistCreator": "Scrooge McDuck",
       "playlistLikeCount": 50,
+       "playlistImage": "https://picsum.photos/200",
       "playlistSongs": [
         {
           "songId": 1,
@@ -367,6 +373,7 @@
       "playlistTitle": "Rainy Nights",
       "playlistCreator": "Huey Duck",
       "playlistLikeCount": 8,
+       "playlistImage": "https://picsum.photos/200",
       "playlistSongs": [
         {
           "songId": 1,
@@ -424,6 +431,7 @@
       "playlistTitle": "Nothing But The Classics",
       "playlistCreator": "Louie Duck",
       "playlistLikeCount": 18,
+       "playlistImage": "https://picsum.photos/200",
       "playlistSongs": [
         {
           "songId": 1,
