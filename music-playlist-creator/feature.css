@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    /* outline: 1px solid red; */
+}
+ul, ol, a{
+    list-style: none;
+    text-decoration: none;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+
+header{
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+}
+/* nav-bar */
+.nav-bar{
+    padding: 20px 20px;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 50px;
+}
+.nav-header{
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li{
+    padding-left: 15px;
+    font-size: small;
+    font-weight: bold;
+}
+
+
+.album-container{
+    display: flex;
+    padding: 50px;
+}
+.playlist-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.album-title{
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 10px;
+}
+.album-right{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.songs-box{
+    display: flex;
+}
+.song-title{
+    font-weight: bold;
+     padding-bottom: 2px;
+}
+.songs-box p{
+    padding-left: 20px;
+}
+.song-artist, .song-duration, .song-album{
+    color: rgb(138, 124, 124);
+    font-size: smaller;
+    padding-bottom: 2px;
+}
+.footer {
+    height: 50px;
+    background-color: lightgrey;
+    text-align: center;
+    padding-top: 15px;
+}
