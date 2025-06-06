@@ -11,7 +11,6 @@ playlist.forEach(item =>{
             <i class="fa-regular fa-heart like-heart"></i> 
             <span class="like-count">${item.playlistLikeCount}</span>
             </p>
-
     </div>
     `
 })
@@ -40,12 +39,16 @@ function fillModal(data){
     modalContent.innerHTML = 
     `
     <div  class="modal-header">
-               <img src="${data.playlistImage}" alt="" width="200px">
+              <div class="modal-header-left">
+                    <img src="${data.playlistImage}" alt="" width="200px">
+                    <button class="shuffle-btn">Shuffle</button>
+              </div>
                 <div>
                     <p style="font-size: xx-large; font-weight: 100;">${data.playlistTitle}</p>
                     <p style="font-size: x-large; font-weight: lighter;">${data.playlistCreator}</p>
                 </div>
-            </div>
+    </div>
+    <div id="modal-bottom">
             ${data.playlistSongs.map(song => `
             <div class="song-card">
                 <div class="song-details">
@@ -58,10 +61,18 @@ function fillModal(data){
                 </div>
                 <p>${song.songDuration}</p>
             </div>
+
                 `
             ).join('')}
-    </div>
-    `
+     </div>
+    `;
+    document.querySelector('.shuffle-btn').addEventListener('click', () => {
+    const songList = document.getElementById("modal-bottom");
+    const songs = Array.from(songList.children);
+    songs.sort(() => Math.random() - 0.5);
+    songList.innerHTML = "";
+    songs.forEach(song => songList.appendChild(song));
+  });
 }
 
 
