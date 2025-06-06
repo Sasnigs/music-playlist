@@ -19,6 +19,7 @@ body {
     background-color: #f8f8f8;
     display: flex;
     flex-direction: column;
+    
 }
 main {
   flex: 1;
@@ -35,7 +36,7 @@ header{
     padding: 20px 20px;
     display: flex;
     justify-content:space-between;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 .nav-header{
     font-weight: bold;
@@ -51,10 +52,26 @@ header{
     font-weight: bold;
 }
 
+form{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* label {
+  display: block;
+  margin-bottom: 10px;
+} */
+
 /* playlist cards */
 
 .playlist-cards {
-   display: flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 100px;

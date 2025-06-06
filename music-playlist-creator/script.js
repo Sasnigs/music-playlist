@@ -75,8 +75,7 @@ function fillModal(data){
   });
 }
 
-
- const like = document.querySelectorAll('.like-heart');
+const like = document.querySelectorAll('.like-heart');
 
 like.forEach(button => {
   button.addEventListener('click', (event) => {
@@ -98,6 +97,62 @@ like.forEach(button => {
     countElement.textContent = count;
   });
 });
+
+const playlistForm = document.querySelector('.playlist-form')
+playlistForm.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    const inputArray = playlistForm.querySelectorAll('input')
+    const inputObject = {}
+    inputArray.forEach(input =>{
+        inputObject[input.name] = input.value
+    })
+    inputObject["playlistImage"] =  "https://picsum.photos/200"
+    playlist.push(inputObject)
+    render(inputObject)
+    // fillModal(inputObject)
+    e.target.reset()
+    playlistForm.innerHTML = 
+    ` <div class="songs-input">
+            <input type="text" class="Playlist-name" name="PlaylistName" placeholder="Playlist-name" required>
+            <input type="text" class="Playlist-author" name="PlaylistAuthor" placeholder="Playlist-author" required>
+            <input type="text" class="song-title" name="songTitle" placeholder="song-title" required>
+            <input type="text" class="song-artist" name="songArtist" placeholder="song-artist" required>
+            <input type="text" class="song-duration" name="songDuration" placeholder="song-duration" required>
+         </div>
+            <button type="submit">AddPlaylist</button>
+             <button class="add-song-btn">Add Song</button>
+    
+   `
+})
+const addSong = document.querySelector('.add-song-btn')
+addSong.addEventListener('click', () =>{
+    const newSong = document.createElement('div')
+    newSong.innerHTML += `
+            <input type="text" class="song-title" name="songTitle" placeholder="song-title" required>
+            <input type="text" class="song-artist" name="songArtist" placeholder="song-artist" required>
+            <input type="text" class="song-duration" name="songDuration" placeholder="song-duration" required>
+    `
+    document.querySelector('.songs-input').appendChild(newSong)
+
+})
+
+function render(data){
+    const newCard = document.createElement('div')
+     newCard.innerHTML = `
+    <div class="cards" data-id=${playlist.length +1}>
+            <img style="border-radius: 5px 5px 0px 0px;" src="${data.playlistImage}" alt="playlist-image" width="250px">
+            <p class="playlist-title">${data.PlaylistName}</p>
+            <p class="creator-name">${data.PlaylistAuthor}</p>
+            <p>
+            <i class="fa-regular fa-heart like-heart"></i> 
+            <span class="like-count">0</span>
+            </p>
+    </div>
+    `
+    playlistCards.appendChild(newCard)
+}
+
+
 
 
 

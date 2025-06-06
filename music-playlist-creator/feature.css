@@ -69,9 +69,12 @@ header{
 .album-right{
     padding-left: 30px;
     padding-top: 20px;
+   
 }
 .songs-box{
     display: flex;
+    margin-bottom: 10px;
+
 }
 .song-title{
     font-weight: bold;
