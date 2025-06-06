@@ -7,7 +7,11 @@ playlist.forEach(item =>{
             <img style="border-radius: 5px 5px 0px 0px;" src="${item.playlistImage}" alt="playlist-image" width="250px">
             <p class="playlist-title">${item.playlistTitle}</p>
             <p class="creator-name">${item.playlistCreator}</p>
-            <p><i class="fa-regular fa-heart"></i> ${item.playlistLikeCount}</p>
+            <p>
+            <i class="fa-regular fa-heart like-heart"></i> 
+            <span class="like-count">${item.playlistLikeCount}</span>
+            </p>
+
     </div>
     `
 })
@@ -61,5 +65,27 @@ function fillModal(data){
 }
 
 
+ const like = document.querySelectorAll('.like-heart');
+
+like.forEach(button => {
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+
+    const countElement = button.nextElementSibling;
+    let count = parseInt(countElement.textContent.trim());
+
+    if (button.classList.contains('liked')) {
+      button.classList.remove('liked', 'fa-solid');
+      button.classList.add('fa-regular');
+      count--;
+    } else {
+      button.classList.add('liked', 'fa-solid');
+      button.classList.remove('fa-regular')
+      count++;
+    }
+
+    countElement.textContent = count;
+  });
+});
 
 

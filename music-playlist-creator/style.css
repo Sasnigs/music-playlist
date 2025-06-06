@@ -2,17 +2,28 @@
     margin: 0;
     padding: 0;
     font: inherit;
+    /* outline: 1px solid red; */
 }
 ul, ol{
     list-style: none;
+}
+html, body {
+  height: 100%;
+  margin: 0;
 }
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    
+    display: flex;
+    flex-direction: column;
 }
+main {
+  flex: 1;
+}
+
+
 header{
     background-color: lightgrey;
     display: flex;
@@ -41,16 +52,24 @@ header{
 
 /* playlist cards */
 
-.playlist-cards{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 10px;
-    row-gap: 30px;
+.playlist-cards {
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
 }
+
 .cards{
-     border-radius: 5px;
-     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+.cards img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .cards:hover{
     box-shadow: 0 20px 80px rgba(231, 31, 31, 0.15);
@@ -69,31 +88,41 @@ header{
 .creator-name{
     font-size: small;
 }
+.liked{
+    color: rgb(133, 4, 4);
+}
 .modal-overlay{
-   display: none; 
-   position: fixed; 
-   z-index: 1; 
-   left: 0;
-   top: 0;
-   width: 100%; 
-   height: 100%; 
-   overflow: auto; 
-   background-color: rgba(0,0,0,0.4); 
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
 
 }
-.show{
-    display: block;
-    position: fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%)
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .modal-content{
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
+    width: 80%;
+     transform: translateY(-30px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.modal-overlay.show .modal-content {
+  transform: translateY(0);
+  opacity: 1;
 }
 .modal-header{
     display: flex;
@@ -120,10 +149,9 @@ header{
     padding-left: 20px;
     
 }
-.footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.footer {
     height: 50px;
     background-color: lightgrey;
+    text-align: center;
+    padding-top: 15px;
 }
