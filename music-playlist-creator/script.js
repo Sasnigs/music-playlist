@@ -74,29 +74,7 @@ function fillModal(data){
     songs.forEach(song => songList.appendChild(song));
   });
 }
-
-const like = document.querySelectorAll('.like-heart');
-
-like.forEach(button => {
-  button.addEventListener('click', (event) => {
-    event.stopPropagation();
-
-    const countElement = button.nextElementSibling;
-    let count = parseInt(countElement.textContent.trim());
-
-    if (button.classList.contains('liked')) {
-      button.classList.remove('liked', 'fa-solid');
-      button.classList.add('fa-regular');
-      count--;
-    } else {
-      button.classList.add('liked', 'fa-solid');
-      button.classList.remove('fa-regular')
-      count++;
-    }
-
-    countElement.textContent = count;
-  });
-});
+likesCount()
 
 const playlistForm = document.querySelector('.playlist-form')
 playlistForm.addEventListener('submit', (e) =>{
@@ -107,6 +85,7 @@ playlistForm.addEventListener('submit', (e) =>{
         inputObject[input.name] = input.value
     })
     inputObject["playlistImage"] =  "https://picsum.photos/200"
+    console.log(inputObject)
     playlist.push(inputObject)
     render(inputObject)
     // fillModal(inputObject)
@@ -148,8 +127,35 @@ function render(data){
             <span class="like-count">0</span>
             </p>
     </div>
-    `
+    `;
     playlistCards.appendChild(newCard)
+    likesCount()
+
+}
+function likesCount(){
+
+const like = document.querySelectorAll('.like-heart');
+like.forEach(button => {
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+
+    const countElement = button.nextElementSibling;
+    let count = parseInt(countElement.textContent.trim());
+
+    if (button.classList.contains('liked')) {
+      button.classList.remove('liked', 'fa-solid');
+      button.classList.add('fa-regular');
+      count--;
+    } else {
+      button.classList.add('liked', 'fa-solid');
+      button.classList.remove('fa-regular')
+      count++;
+    }
+
+    countElement.textContent = count;
+  });
+});
+
 }
 
 

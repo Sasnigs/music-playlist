@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font: inherit;
-    /* outline: 1px solid red; */
+    
 }
 ul, ol, a{
     list-style: none;
@@ -36,7 +36,6 @@ header{
     padding: 20px 20px;
     display: flex;
     justify-content:space-between;
-    /* margin-bottom: 50px; */
 }
 .nav-header{
     font-weight: bold;
@@ -63,10 +62,7 @@ form{
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* label {
-  display: block;
-  margin-bottom: 10px;
-} */
+
 
 /* playlist cards */
 
@@ -83,6 +79,7 @@ form{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     transition: box-shadow 0.3s ease;
+    cursor: pointer;
 }
 .cards img {
   width: 100%;
@@ -129,16 +126,17 @@ form{
   pointer-events: auto;
 }
 .modal-content{
-    max-height: 80vh;       
+  max-height: 50vh;       
   overflow-y: auto;      
   background-color: #fefefe;
-  margin: auto;
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
   transform: translateY(-30px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 20px;
 }
 .modal-overlay.show .modal-content {
   transform: translateY(0);
