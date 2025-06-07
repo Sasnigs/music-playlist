@@ -2,9 +2,9 @@
 
 Submitted by: Osasenaga Obaseki
 
-Estimated time spent: 40 hours spent in total
+Estimated time spent: 40-50 hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://music-playlist-s5lm.onrender.com/)
 
 ### Application Features
 
@@ -129,8 +129,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
-
+https://www.loom.com/share/cbc0c268ebb546688d18f6e063ce200b?sid=fa758d7f-d77a-4ec3-bc9a-23ab3cc002e4 
 `ADD_EMBEDDED_CODE_HERE`
 
 ### Reflection
